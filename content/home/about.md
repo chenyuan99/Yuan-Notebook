@@ -1,21 +1,23 @@
----
-# An instance of the About widget.
-# Documentation: https://wowchemy.com/docs/page-builder/
 widget: about
+headless: true  # This file represents a page section.
 
-# Activate this widget? true/false
-active: true
+# ... Put Your Section Options Here (title etc.) ...
 
-# This file represents a page section.
-headless: true
+# Hero image (optional). Enter filename of an image in the `static/media/` folder.
+hero_media: ''
 
-# Order that this section appears on the page.
-weight: 20
+# Call to action links (optional).
+#   Display link(s) by specifying a URL and label below. Icon is optional for `cta`.
+#   Remove a link/note by deleting a cta/note block.
+cta:
+  url: 'https://wowchemy.com'
+  label: Get Started
+  icon_pack: fas
+  icon: download
+cta_alt:
+  url: 'https://wowchemy.com'
+  label: View Documentation
 
-title: Biography
-
-# Choose the user profile to display
-# This should be the username (folder name) of a profile in your `content/authors/` folder.
-# See https://wowchemy.com/docs/get-started/#introduce-yourself
-author: admin
----
+# Note. An optional note to show underneath the links.
+cta_note:
+  label: ''
