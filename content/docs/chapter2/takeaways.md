@@ -1,6 +1,6 @@
 ---
-title: Takeaways
-linktitle: Takeaways
+title: Detailed Design
+linktitle: Detailed Design
 toc: true
 type: book
 date: "2019-05-05T00:00:00+01:00"
@@ -11,12 +11,102 @@ draft: true
 weight: 3
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+# Detailed Design
 
-Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.
+- Overview
+  - What is detailed design?
+  - What is OO design?
+  - How should we do OO design?
 
-Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.
+- Detailed design
+  - To decompose subsystems into modules
+  - Two approaches of decomposition 
+    - Procedual
+    - System is decompose
+    - Object-oriented
+		
+- Abstraction
+  - To focus on important, inherent properties while suppressing unnecessary details
+    - Permits separation of concern
+    - Allows postponements
+  - Two abstraction mechanisms
+    - Procedural abstraction
+      - Specification describes input/output
+      - Implementation describes algorithm
+    - Data abstraction
+      - Specification describes attributes, values
+      - Implementation describes representation and
+manipulation
 
-Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.
+- OOD
+  - To identify responsibilities and assign them to classes and objects
+  - Responsibility for doing
+    - E.g., create an object, perform calculations, invoking operations on other objects
+  Responsibilities for knowing 
+		- E.g., attributes, data involved in calculations, parameters when invoking operations
+- How Do developers Design Objects?
+	- Code
+		- Draw, then code
+			- UML Diagrams
+		- Only draw
+			- The tool generates everything from diagrams
 
-Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.
+- How much time spent drawing UML before coding?
+	- Spend a few hours or at most one day (with partners) near 
+	- Draw uml for the hard, creative parts of the detailed object design
+	- Stop and transition to coding
+	- UML drawings
+		- Inspiration as a starting point
+		- The final design in code may diverge and improve
+			
+- Detailed design resultes
+	- Dynamic models
+		- Help design the logic/behavior of the code
+		- UML interaction diagrams
+	- Static models
+		- Help design the definition of packages, class names, attributes, and method signatures
+		- (detailed) UML class diagrams
+			
+- UML Interaction Diagrams
+	- To illustrate how objects interact via messages
+	- Two types of interaction diagrams
+		- Communication diagram 
+		- Sequence diagram
+			- Illustrate interactions in akind of fence format, in which each new object is added 
+				
+- How should we do OO Design
+	- Responsibility-driven
+		
+- Responsibilities
+	- Obligations/behaviors
+		
+- Doing Responsibiliities
+	- Doing something itself
+		
+- Guideline
+	- The transition of responsibilities into classes and methods is influenced by the gra
+		
+- Knowing responsibilities
+	- Knowing about private encapsulated data
+	- Knowing related objects
+	- Knowing about things it can derive of calcualate
+	  - "a sale of ject"
+			
+- Guideline
+	- The attributes and associations illuatrats=ed by domain objects
+	
+- GRASP:
+	- Principles
+		- Creator(doing)
+			- Problem: who creates an A?
+			- Advice: Assign class B the responsibility to create an instance of class A if:
+				- B "contains" or compositely aggregates A
+				- Whole-part; assembly
+		- Information expert
+		- Low coupling
+		- Controller
+		- High cohesion
+		
+- Sequence vs communication
+- Summary
+	- Object fullfill tasks using their info or the info of objects the 
