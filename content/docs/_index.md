@@ -1,6 +1,6 @@
 ---
-title: Docs
+title: CS3704
 type: book  # Do not modify.
 ---
 
-Welcome to the _book_ template!
+Welcome to CS3704 Intermediate Software Engineering 21SP
