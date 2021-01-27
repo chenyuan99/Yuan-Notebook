@@ -4,6 +4,11 @@
 #   The weight parameter defines the order that the links will appear in.
 
 [[main]]
-  name = "CS3704 Notes"
-  url = "docs/"
+  name = "CS3704"
+  url = "cs3704/"
+  weight = 10
+
+[[main]]
+  name = "CS4704"
+  url = "cs4704/"
   weight = 10
