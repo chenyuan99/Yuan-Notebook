@@ -12,43 +12,81 @@ date: "2018-09-09T00:00:00Z"
 type: book  # Do not modify.
 ---
 
-## Flexibility
 
-This feature can be used for publishing content such as:
+=========
+- Expressions are fundamental
+- Understanding syntax is very important
+- Must understand the meaning, semantics, of the statements
 
-* **Online courses**
-* **Project or software documentation**
-* **Tutorials**
-* **Notes**
+Arithmetic Expressions
+======================
+- Math in computer languages have developed from how we do math
+- Kept the typical order of operations
+- Unary, single operator and operand
+- Binary, single operator and 2 operands
+- Infix, operator between operands
+- Prefix, operator before operand
+- Use parentheses
 
-The `courses` folder may be renamed. For example, we can rename it to `docs` for software/project documentation or `tutorials` for creating an online course.
+Precedence/Associativity
+========================
+- Which operation will occur before the other
+- `a + b *`
+- Generally we will follow the typical math order
+- Parentheses are always a way to enforce the order you want
+- Generally we associate left to right when operators have same level of
+precedence
 
-## Delete courses
+Side Effects
+============
+- A side effect is when a function changes a parameter or a global variable.
+- This matters when you are using a parameter in an expression where the 
+parameter is also being combined with the function return:
 
-**To remove these pages, delete the `courses` folder and see below to delete the associated menu link.**
+	a + fun(a)
 
-## Update site menu
+- Some languages, e.g. functional languages, don't typically allow for side
+effects.
 
-After renaming or deleting the `courses` folder, you may wish to update any `[[main]]` menu links to it by editing your menu configuration at `config/_default/menus.toml`.
+Type Conversions
+================
+- Narrowing
+	- Going from a larger memory type to a smaller
+	- Generally bad unless you know the data won't overflow
+	- e.g. Double to float
+- Widening
+	- Going from a smaller memory type to a larger
+	- Generally not a problem
+	- e.g. Float to double
+- Mixed expression will typically invoke implicit type coercion
 
-For example, if you delete this folder, you can remove the following from your menu configuration:
+Boolean Expressions
+===================
+- Symbols or words
+- Short circuit evaluation
+	- Only evaluate as much as needed to determine truth of statement
+	- A && B || C
+	- if ( x != 0 && y / x < 10 )
 
-```toml
-[[main]]
-  name = "Courses"
-  url = "courses/"
-  weight = 50
-```
+Assignment Statements
+=====================
+- Central concept of imperative languages
+- Compound statement
+	- a += b;
+	- x = ++ count;
+		- count = count + 1;
+		- x = count;
 
-Or, if you are creating a software documentation site, you can rename the `courses` folder to `docs` and update the associated *Courses* menu configuration to:
+Functional Languages
+====================
+- Once a variable is bound it can't be changed.
+- Functions operate like mathematical functions
+	- Operate on inputs and provide outputs
+	- No side effects
 
-```toml
-[[main]]
-  name = "Docs"
-  url = "docs/"
-  weight = 50
-```
+Summary
+=======
+- Expressions and assignments are stems
+- Came from imperative languages
+- Evolved over time
 
-## Update the docs menu
-
-If you use the *docs* layout, note that the name of the menu in the front matter should be in the form `[menu.X]` where `X` is the folder name. Hence, if you rename the `courses/example/` folder, you should also rename the menu definitions in the front matter of files within `courses/example/` from `[menu.example]` to `[menu.<NewFolderName>]`.
