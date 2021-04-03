@@ -1,13 +1,13 @@
 ---
-title: CS3704
+title: CS3304
 type: book  # Do not modify.
 ---
 
-Welcome to CS3704 Intermediate Software Engineering 21SP
+Welcome to CS3304 Comparative Programming Languages 21SP
 
-## CS3704: Intermediate Software Design and Engineering
+## CS3304: Intermediate Software Design and Engineering
 
-Explores the principles of software design in detail, with an emphasis on software engineering aspects. Includes exposure of software lifecycle activities including design, coding, testing, debugging, and maintenance, highlighting how design affects these activities. Peer reviews, designing for software reuse, CASE tools, and writing software to specifications are also covered.  (3H,3C)
+This course in programming language constructs emphasizes the run-time behavior of programs. The languages are studied from two points of view: (1) the fundamental elements of languages and their inclusion in commercially available systems; and, (2) the differences between implementations of common elements in languages. (3H,3C)
 
 ### Prerequisites
 
@@ -17,12 +17,10 @@ A grade of C or better required in CS 3114.
 
 CS majors must achieve a grade of C or better in CS 2104 before attempting CS 3704
 
-### Taught By
+### Taught By: 
 
-Osman Balci 
+James Arthur
 
-Francisco Servant
+Denis Gracanin
 
-Na Meng
-
-Eli Tilevich
+Stephen Edwards
